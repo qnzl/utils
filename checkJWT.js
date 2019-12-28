@@ -9,7 +9,7 @@ module.exports = (authorization, desiredClaim, subject, issuer) => {
 
   let decodedToken
   try {
-    decodedToken = JWT.verify(token, pubKey, {
+    decodedToken = JWT.verify(token, pubKey.trim(), {
       subject,
       issuer
     })
